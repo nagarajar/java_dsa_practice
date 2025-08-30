@@ -15,8 +15,12 @@ public class TimeComplexity {
          * Definition: Space Complexity
          * Space complexity measures the extra memory (or space) an algorithm needs to run 
          * as the input size increases, not counting the memory needed to store the input itself.
+         *
+         * Note: "Auxiliary space" refers specifically to the extra (temporary) memory used by 
+         * the algorithm, excluding the space required for input. In most cases, when we discuss 
+         * space complexity, we are referring to auxiliary space.
          */
-    	
+
         // Record the start time to measure execution duration
         LocalDateTime start = LocalDateTime.now(); // 1 operation, O(1) time, uses constant space
 
@@ -62,6 +66,7 @@ public class TimeComplexity {
          * No arrays or collections that grow with 'n'.
          * Even though 'a' is declared in the loop, it's re-used each iteration (not O(n) additional space)
          * So, Space Complexity: O(1)
+         * (Auxiliary space is O(1) since no extra data structures are used.)
          */
     }
 }
