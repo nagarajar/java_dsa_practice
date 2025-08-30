@@ -6,6 +6,17 @@ import java.time.LocalDateTime;
 public class TimeComplexity {
 
     public static void main(String[] args) {
+        /*
+         * Definition: Time Complexity
+         * Time complexity is a way to describe how the running time of an algorithm increases 
+         * as the size of the input increases. It estimates the number of basic operations 
+         * performed relative to input size (n).
+         *
+         * Definition: Space Complexity
+         * Space complexity measures the extra memory (or space) an algorithm needs to run 
+         * as the input size increases, not counting the memory needed to store the input itself.
+         */
+    	
         // Record the start time to measure execution duration
         LocalDateTime start = LocalDateTime.now(); // 1 operation, O(1) time, uses constant space
 
