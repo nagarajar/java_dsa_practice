@@ -3,7 +3,7 @@ package practice.dsa.java.a.intro;
 import java.time.Duration;
 import java.time.LocalDateTime;
 
-public class TimeComplexity {
+public class ATimeComplexity {
 
     public static void main(String[] args) {
         /*

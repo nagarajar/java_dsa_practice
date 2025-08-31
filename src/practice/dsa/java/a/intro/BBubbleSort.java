@@ -2,7 +2,7 @@ package practice.dsa.java.a.intro;
 
 import java.util.Arrays;
 
-public class BubbleSort {
+public class BBubbleSort {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
