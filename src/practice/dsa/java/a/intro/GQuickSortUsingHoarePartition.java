@@ -48,6 +48,7 @@ public class GQuickSortUsingHoarePartition {
      * @return The partition index.
      */
     private static int partitioning(int[] a, int l, int h) {
+    	System.out.println("l="+l+"; h="+h);
         int PIVOT = a[l]; // Select the first element as the pivot
         int i = l;        // i starts from the beginning of the subarray
         int j = h;        // j starts from the end of the subarray
@@ -77,6 +78,7 @@ public class GQuickSortUsingHoarePartition {
         a[j] = PIVOT;
 
         // Print array status after each partition for debugging/visualization
+        System.out.println("i="+i+"; j="+j);
         System.out.println("Count: " + count++ + " - After partitioning: " + Arrays.toString(a));
         return j; // Return the pivot's final position
     }
