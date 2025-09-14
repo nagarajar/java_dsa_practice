@@ -1,7 +1,5 @@
 package practice.dsa.java.b.tree;
 
-import java.util.LinkedList;
-import java.util.Queue;
 
 public class BinarySearchTree {
 	class Node {
@@ -72,6 +70,23 @@ public class BinarySearchTree {
 			postOrderTraversal(root.left);
 			postOrderTraversal(root.right);
 			System.out.print(root.data + " ");
+		}
+	}
+
+	// Find the height of the tree
+	public int heightOfTree(Node root) {
+		if (root == null) {
+			return 0;
+		} else {
+			int lh = 0, rh = 0;
+			lh = heightOfTree(root.left);
+			rh = heightOfTree(root.right);
+
+			if (lh > rh) {
+				return lh + 1;
+			} else {
+				return rh + 1;
+			}
 		}
 	}
 

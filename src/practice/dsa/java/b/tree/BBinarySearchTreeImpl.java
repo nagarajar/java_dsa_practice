@@ -60,6 +60,7 @@ public class BBinarySearchTreeImpl {
 		System.out.println("Post Order Traversal - 3, 6, 5, 12, 18, 15, 10");
 		bst.postOrderTraversal(bst.root);
 		System.out.println();
+		System.out.println("Height of the tree: "+bst.heightOfTree(bst.root));
 
 	}
 
