@@ -1,6 +1,5 @@
 package practice.dsa.java.b.tree;
 
-
 public class BinarySearchTree {
 	class Node {
 		int data;
@@ -87,6 +86,34 @@ public class BinarySearchTree {
 			} else {
 				return rh + 1;
 			}
+		}
+	}
+
+	// Print level order traversal
+	public void levelOrderTraversal(Node root) {
+		if(root != null) {
+			//Find the height of tree
+			int h = heightOfTree(root);
+			
+			//Iterate h times to print all values in the each level
+			for(int i=1; i<=h; i++) {
+				levelOrder(root, i);
+			}
+		}
+	}
+	
+	public void levelOrder(Node temp, int h) {
+		//Check if temp is null so it will act as break for the recursive
+		if(temp == null) {
+			return;
+		} 
+		
+		if(h == 1) {
+			System.out.print(temp.data+" ");
+		} else {
+			//We need to go left and right to print the values in that level
+			levelOrder(temp.left, h-1);
+			levelOrder(temp.right, h-1);
 		}
 	}
 
