@@ -11,7 +11,7 @@ public class BinarySearchTree {
 		}
 	}
 
-	Node root = null;
+	public Node root = null;
 
 	public void add(int data) {
 		Node n = new Node(data);
@@ -116,5 +116,29 @@ public class BinarySearchTree {
 			levelOrder(temp.right, h-1);
 		}
 	}
+
+	public void mirrorImageOfTree(Node root) {
+		// TODO Auto-generated method stub
+		if(root == null) {
+			return;
+		} else {
+			mirrorImageOfTree(root.left);
+			mirrorImageOfTree(root.right);
+			swap(root);
+		}
+		
+	}
+
+	private void swap(Node root) {
+		// TODO Auto-generated method stub
+		if(root == null) {
+			return;
+		} else {
+			Node temp = root.left;
+			root.left = root.right;
+			root.right = temp;
+		}
+	}
+			
 
 }
