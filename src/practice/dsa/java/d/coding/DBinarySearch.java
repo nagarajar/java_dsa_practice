@@ -21,7 +21,9 @@ public class DBinarySearch {
 		// TODO Auto-generated method stub
 		if (l <= h) {
 			iterationsRecursion++;
-			int m = (l + h) / 2;
+			int m = (l + h) / 2; // Which cause the overflow issue in the binary search 
+								 // l = 1000, h = 2147483647 ; (Integer.MAX_VALUE) this kind of situation will get the overflow issue.
+								// To avoid this issue will use the formal -> m = (l+ (h-l))/2
 			if (a[m] == find) {
 				System.out.println("Element found at index = " + m);
 				return;
