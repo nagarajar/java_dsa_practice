@@ -34,10 +34,10 @@ public class CDynamicProgramming {
 	}
 
 	public static int recursiveDynamic(int n) {
+		countDynamic++;
 		if (map.containsKey("f" + n)) {
 			return map.get("f" + n);
 		}
-		countDynamic++;
 		if (n == 0 || n == 1) {
 			map.put("f" + n, n);
 			return n;
