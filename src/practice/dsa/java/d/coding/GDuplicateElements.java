@@ -8,17 +8,19 @@ public class GDuplicateElements {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int[] a = {1,2,3,1,4,5,2,4,9,5};
+		int[] a = {1,2,2,2,3,1,4,5,2,4,9,5};
 		
 		Set<Integer> s = new HashSet<>();
+		Set<Integer> duplicates = new HashSet<>();
 		
 		//Print duplicates
 		for(int i=0; i<a.length; i++) {
 			if(!s.add(a[i])) {
-				System.out.println("Duplicate elemenent = "+a[i]);
+				duplicates.add(a[i]);
 			}
 		}
 		//remove duplicates
+		System.out.println(duplicates);
 		System.out.println(s);
 		
 		findDuplicateUsingPlanJava(a);
@@ -37,10 +39,19 @@ public class GDuplicateElements {
 				}
 			}
 			
-			if(isDuplicate) { // !isDuplicate you will get unique values
-				duplicateArray[k]=a[i];
-				k++;
-			}
+	        // If it's a duplicate, check if we already added it to result
+	        if (isDuplicate) {
+	            boolean alreadyInResult = false;
+	            for (int m = 0; m < k; m++) {
+	                if (duplicateArray[m] == a[i]) {
+	                    alreadyInResult = true;
+	                    break;
+	                }
+	            }
+	            if (!alreadyInResult) {
+	                duplicateArray[k++] = a[i];
+	            }
+	        }
 		}
 		duplicateArray = Arrays.copyOf(duplicateArray, k);
 		System.out.println(Arrays.toString(duplicateArray));
